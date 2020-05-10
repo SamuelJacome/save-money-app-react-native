@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Platform } from 'react-native';
-// import { useNavigation } from '@react-navigation/native'
+
 import { Container,
         Background,
         Logo,
@@ -8,16 +8,15 @@ import { Container,
         Input,
         SubmitButton,
         SubmitText,
-        Link,
-        LinkText
-        } from './styles';
+
+        } from '../SignIn/styles';
 
 
-function SignIn ({ navigation }) {
-    // const navigation = useNavigation();
+function SignUp ({ navigation }) {
 
     const[email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [nome, setNome] = useState('');
  
     return (
   
@@ -30,6 +29,18 @@ function SignIn ({ navigation }) {
         <AreaInput>
 
             <Input
+            placeholder="Nome"
+            autoCorrect={false}
+            autoCapitalize="none"
+            value={nome}
+            onChangeText = {(text) => setNome(text) }
+            />
+
+        </AreaInput>
+
+        <AreaInput>
+
+            <Input
             placeholder="Email"
             autoCorrect={false}
             autoCapitalize="none"
@@ -39,10 +50,11 @@ function SignIn ({ navigation }) {
 
         </AreaInput>
 
+        
         <AreaInput>
 
             <Input
-            placeholder="Password"
+            placeholder="Senha"
             autoCorrect={false}
             autoCapitalize="none"
             value={password}
@@ -51,15 +63,13 @@ function SignIn ({ navigation }) {
 
         </AreaInput>
 
+  
+
 
         <SubmitButton>
-            <SubmitText>Acessar</SubmitText>
+            <SubmitText>Cadastrar</SubmitText>
         </SubmitButton>
-    
 
-        <Link onPress={()=> navigation.navigate('SignUp')}>
-            <LinkText>Criar uma Conta</LinkText>
-        </Link>
     
     
     </Container>
@@ -71,4 +81,4 @@ function SignIn ({ navigation }) {
   );
 }
 
-export default SignIn;
+export default SignUp;
