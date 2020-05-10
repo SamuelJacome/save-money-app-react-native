@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text } from 'react-native';
 
 import { Container,
@@ -6,11 +6,19 @@ import { Container,
         Logo,
         AreaInput,
         Input,
+        SubmitButton,
+        SubmitText,
+        Link,
+        LinkText
         } from './styles';
 
 
 function SignIn () {
-  return (
+
+    const[email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+ 
+    return (
   
   <Background>
     <Container>
@@ -21,6 +29,8 @@ function SignIn () {
             placeholder="Email"
             autoCorrect={false}
             autoCapitalize="none"
+            value={email}
+            onChangeText = {(text) => setEmail(text) }
             />
 
         </AreaInput>
@@ -31,10 +41,21 @@ function SignIn () {
             placeholder="Password"
             autoCorrect={false}
             autoCapitalize="none"
+            value={password}
+            onChangeText = {(text) => setPassword(text) }
             />
 
         </AreaInput>
+
+
+        <SubmitButton>
+            <SubmitText>Acessar</SubmitText>
+        </SubmitButton>
     
+
+        <Link>
+            <LinkText>Criar uma Conta</LinkText>
+        </Link>
     
     
     </Container>
