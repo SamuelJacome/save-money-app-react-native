@@ -12,7 +12,7 @@ align-items: center;
 justify-content: center;
 `;
 export const Logo = styled.Image`
-margin-top: 15px;
+margin-bottom: 15px;
 `;
 export const AreaInput = styled.View`
 flex-direction: row;
