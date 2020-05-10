@@ -1,14 +1,46 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-// import { Container } from './styles';
+import { Container,
+        Background,
+        Logo,
+        AreaInput,
+        Input,
+        } from './styles';
+
 
 function SignIn () {
   return (
   
-  <View>
-    <Text>SignIn</Text>
-  </View>
+  <Background>
+    <Container>
+        <Logo source={require('../../../assets/Logo.png')}/>
+        <AreaInput>
+
+            <Input
+            placeholder="Email"
+            autoCorrect={false}
+            autoCapitalize="none"
+            />
+
+        </AreaInput>
+
+        <AreaInput>
+
+            <Input
+            placeholder="Password"
+            autoCorrect={false}
+            autoCapitalize="none"
+            />
+
+        </AreaInput>
+    
+    
+    
+    </Container>
+
+
+  </Background>
   
   
   );
