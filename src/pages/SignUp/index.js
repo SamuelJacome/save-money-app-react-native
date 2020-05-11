@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Platform } from 'react-native';
+
+import { AuthContext } from '../../contexts/auth';
 
 import { Container,
         Background,
@@ -17,7 +19,10 @@ function SignUp ({ navigation }) {
     const[email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [nome, setNome] = useState('');
- 
+    const { user } = useContext(AuthContext);
+    
+    console.log(user.nome);
+    
     return (
   
   <Background>
