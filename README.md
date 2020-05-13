@@ -1,4 +1,4 @@
-![Screenshot](logo.png)
+![Screenshot](Logo.png)
 # Save Money 
 
 
