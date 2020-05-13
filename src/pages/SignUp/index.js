@@ -1,8 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { Platform } from 'react-native';
 
-import { AuthContext } from '../../contexts/auth';
-
+import { AuthContext } from '../../contexts/auth'
 import { Container,
         Background,
         Logo,
@@ -14,14 +13,17 @@ import { Container,
         } from '../SignIn/styles';
 
 
-function SignUp ({ navigation }) {
+function SignIn ({ navigation }) {
 
     const[email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [nome, setNome] = useState('');
-    const { user } = useContext(AuthContext);
     
-    console.log(user.nome);
+    const {signUp} = useContext(AuthContext);
+
+    function handleSignUp(){
+        signUp(email, password, nome);
+    }
     
     return (
   
@@ -71,7 +73,7 @@ function SignUp ({ navigation }) {
   
 
 
-        <SubmitButton>
+        <SubmitButton onPress={handleSignUp}>
             <SubmitText>Cadastrar</SubmitText>
         </SubmitButton>
 
@@ -86,4 +88,4 @@ function SignUp ({ navigation }) {
   );
 }
 
-export default SignUp;
+export default SignIn;
