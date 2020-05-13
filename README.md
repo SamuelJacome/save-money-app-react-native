@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Logo.png" />
+</p>
+
 ![Screenshot](Logo.png)
 # Save Money 
 
