@@ -16,14 +16,20 @@
   </ul>
 <hr/>
 
-<h6><b>Abaixo é possivel ver algumas telas e uma breve descrição de como foi feito:</b>/h6>
+<h6><b>Abaixo é possivel ver algumas telas e uma breve descrição de como foi feito:</b></h6>
 
 
 
 # SignIn
 
-![Screenshot](login.PNG)
+  <p align="center">
+    <img src="login.PNG" />
+  </p>
+  
+
 
 # SignUp
 
-![Screenshot](cadastro.PNG)
+ <p align="center">
+    <img src="cadastro.PNG" />
+  </p>
