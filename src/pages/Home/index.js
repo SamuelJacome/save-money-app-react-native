@@ -5,13 +5,16 @@ import { Container, Background, Nome, Saldo, Title, List } from './styles';
 import Header from '../../components/Header';
 import HistoricoList from '../../components/HistoricoList'
 function Home () {
-  const {user, signOut} = useContext(AuthContext)
+  const {user} = useContext(AuthContext)
 
   const[historico, setHistorico] = useState([
     {key: '1', tipo: 'receita', valor: 1200 },
     {key: '2', tipo: 'despesa', valor: 200 },
     {key: '3', tipo: 'receita', valor: 1200 },
-    {key: '4', tipo: 'receita', valor: 89.62 },
+    {key: '4', tipo: 'despesa', valor: 89.62 },
+    {key: '5', tipo: 'despesa', valor: 89.62 },
+    {key: '6', tipo: 'despesa', valor: 89.62 },
+    {key: '7', tipo: 'despesa', valor: 89.62 },
   ])
   return (
   
@@ -19,7 +22,7 @@ function Home () {
     <Header/>
     
       <Container>
-        <Nome>Samuel</Nome>
+        <Nome>{user && user.nome}</Nome>
         <Saldo>R$ 120,00</Saldo>
       </Container>
 
@@ -28,10 +31,10 @@ function Home () {
 
 
     <List
-      showVerticalScrollIndicator={false}
+      showsVerticalScrollIndicator={false}
       data={historico}
       keyExtractor={ item => item.key}
-      renderItem={(item)=>(<HistoricoList/>)}
+      renderItem={({item})=>(<HistoricoList data={item}/>)}
     
     />
     
