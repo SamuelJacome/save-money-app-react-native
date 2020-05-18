@@ -46,7 +46,7 @@
   # New
 
  <p align="center">
-    <img src="New.PNG" />
+    <img src="Registrar.PNG" />
   </p>
 <h3>Aqui podemos inserir o valor e no picker selecionar se é uma despesa ou uma receita. Após clicar no botão, se todos os dados estiverem preenchidos devidamente o teclado fecha e o app é redirecionado para a home.</h3>
 
