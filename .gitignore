@@ -33,7 +33,11 @@ local.properties
 #
 node_modules/
 npm-debug.log
+chaveApp.keystore
 yarn-error.log
+
+src/services/
+firebase.js
 
 # BUCK
 buck-out/

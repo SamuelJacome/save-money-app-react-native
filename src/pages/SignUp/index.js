@@ -65,6 +65,7 @@ function SignIn ({ navigation }) {
             autoCorrect={false}
             autoCapitalize="none"
             value={password}
+            secureTextEntry={true}
             onChangeText = {(text) => setPassword(text) }
             />
 
