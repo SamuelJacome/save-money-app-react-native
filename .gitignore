@@ -37,7 +37,7 @@ chaveApp.keystore
 yarn-error.log
 
 
-src/services/*
+src/services/
 
 # BUCK
 buck-out/
