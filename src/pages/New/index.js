@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { SafeAreaView, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import Header from '../../components/Header'
 import {  Background, Input, SubmitButton, SubmitText } from './styles';
-
-const New = () => {
+import Picker from '../../components/Picker'
+function New () {
 
   const[valor, setValor] = useState('');
   const[tipo, setTipo] = useState(null);
@@ -18,8 +18,9 @@ const New = () => {
         keyboardType="numeric" 
         returnKeyType="next"
         onSubmitEditing = { ()=> Keyboard.dismiss() }
+        onChangeText = { (text) => setValor(text) }
         />
-      
+        <Picker onChange={setTipo}/>
         <SubmitButton>
           <SubmitText>Registrar</SubmitText>
         </SubmitButton>
