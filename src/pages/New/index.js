@@ -20,6 +20,8 @@ function New () {
         onSubmitEditing = { ()=> Keyboard.dismiss() }
         onChangeText = { (text) => setValor(text) }
         />
+
+
         <Picker onChange={setTipo}/>
         <SubmitButton>
           <SubmitText>Registrar</SubmitText>
