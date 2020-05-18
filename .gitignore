@@ -37,7 +37,7 @@ chaveApp.keystore
 yarn-error.log
 
 
-firebase.js
+services
 
 # BUCK
 buck-out/
