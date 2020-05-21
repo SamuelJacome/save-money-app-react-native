@@ -10,6 +10,7 @@
   
   <ul >
   <li>react-native</li>
+  <li>react-navigation</li>
   <li>firebase</li>
   <li>styled-components</li>
   <li>async-storage</li>
